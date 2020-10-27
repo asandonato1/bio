@@ -45,8 +45,8 @@ def codGen(array):
       """)
 
     print(final)
-#tira o # pra testar cada um. se dois tiverem se comentario so a primeira sequencia vai ser printada
+#tira o # pra testar cada um. se dois tiverem sem comentario so a primeira sequencia vai ser printada
 #codGen(["ATG", "AAG", "TCA", "GCT", "ATT", "TTA", "ACC", "GGT", "TTG", "CTT", "TTC", "GTC"])
 #codGen(["GAA", "AAC", "ATG", "GAG", "AAC", "GAT", "GAA", "AAT", "ATT", "GTG", "TAT", "GGT"])
 #codGen(["GGT", "TGG", "GCT", "TTG", "CGG", "ATC", "ATG", "TTT", "CTA", "CAT", "CTG", "TAC"])
-##codGen(["CCT", "GGG", "GAG", "AAC", "CTA", "TGC", "TAT", "AGA", "AAG", "ATG", "TGG", "TGC"])
+#codGen(["CCT", "GGG", "GAG", "AAC", "CTA", "TGC", "TAT", "AGA", "AAG", "ATG", "TGG", "TGC"])
