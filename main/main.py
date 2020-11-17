@@ -1,7 +1,6 @@
-import menu
 import classes
-
-#player = classes.Player("me", 15)
+import dicts
+player = classes.Player("me", 15)
 final = []
 skills = []
 def codGen(array):
@@ -41,19 +40,36 @@ def codGen(array):
     print(skills)
     if "Flight" in skills and "Horse" in skills:
         print('''
-        Sequence identified!
-        ["P", "G", "E", "W", "H", "T"] identified 
-        You have developed a pegasus!
-        ''')
+                Sequence identified!
+                ["P", "G", "E", "W", "H", "T"] identified 
+                You have developed a pegasus!
+                ''')
+        dicts.pegasId = True
+        dicts.pegasCheck(dicts.pegasId)
     elif "Human torso" in skills and "Horse" in skills:
         print('''
         You have developed a centaur!
         ''')
+        dicts.minotId = True
+        dicts.minotCheck(dicts)
+
+choice = input("Choose an option: ")
+print('''
+1: Append to species     
+2: Calculate survival 
+''')
+if int(choice) == 1:
+    print("1 working")
+
+elif int(choice) == 2:
+    print("2 working")
+else:
+    print("invalid ")
 
 
 codGen(["TGG", "CAC", "ACG", "CCG", "GGA", "GAG", "CCA", "AAT", "TTA", "AAA", "TTT", "GGC"])
-test = classes.Creature(name="Pegasus", skills1=["Horse", "Flight"], successRate=11)
-
+test = classes.Creature(name="Pegasus", skills=["Horse", "Flight"])
+test.successRate = 11
+print(test.successRate)
 print(test.failRate(test.successRate))
-
 
