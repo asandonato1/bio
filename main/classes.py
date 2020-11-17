@@ -4,15 +4,13 @@ class Player:
         self.age : int = age
 
 class Creature:
-    def __init__(self, name, skills1, successRate):
+    def __init__(self, name, skills, successRate=0):
         self.name = name
-        self.skills1 = skills1
-        self.successRate = successRate
-    def calculation(self, skills1):
-        if "Horse" in skills1 and "Flight" in skills1:
-            self.successRate += 11
+        self.skills = skills
+        self.successRate : int = successRate
     def failRate(self, successRate):
-        if successRate < 10:
+        if self.successRate < 10:
             return "Your species will not survive under its current conditions"
-        elif successRate > 10:
+        elif self.successRate > 10:
             return "Your species will survive"
+
